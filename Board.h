@@ -6,9 +6,10 @@
 
 using std::string;
 
-class Board : public Game {
+class Board{
 private:
 	Piece* _board[8][8];
+	char _currentColor;
 
 public:
 	Board(string pieces);

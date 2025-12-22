@@ -4,6 +4,7 @@
 
 
 Board::Board(string pieces) {
+
     //example string - rnbqkbnrpppppppp################################PPPPPPPPRNBQKBNR0
     int current_char = ' ';
     int counter = 0;
@@ -18,6 +19,7 @@ Board::Board(string pieces) {
             if (pieces[counter] == '#') { _board[i][j] = nullptr; }
 
             if (pieces[counter] == 'r') { _board[i][j] = new Rook('r'); }
+            
             //coninue for the other pieces...
 
 
@@ -26,6 +28,9 @@ Board::Board(string pieces) {
         }
 
     }
+
+    _currentColor = (pieces[65] == 0) ? 'B' : 'W';
+
 }
 
 Board::~Board() {
@@ -94,6 +99,7 @@ int Board::move_piece(Position src, Position dst) {
 
 
     //Make the move temporarily and check if the player put themselves in check
+
     _board[dst.row][dst.col] = srcP;
     _board[src.row][src.col] = nullptr;
 
