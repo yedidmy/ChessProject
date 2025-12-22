@@ -13,7 +13,7 @@ using std::endl;
 using std::string;
 
 
-void main()
+int main()
 {
 	srand(time_t(NULL));
 
@@ -37,7 +37,7 @@ void main()
 		else 
 		{
 			p.close();
-			return;
+			return 0;
 		}
 	}
 	
@@ -76,4 +76,5 @@ void main()
 	}
 
 	p.close();
+	return 0;
 }

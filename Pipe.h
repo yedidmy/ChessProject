@@ -37,6 +37,7 @@
 #include <windows.h>
 #include <string>
 #include <stdio.h>
+#include <iostream>
 #include <conio.h>
 #include <tchar.h>
 
@@ -118,7 +119,7 @@ public:
 			cbBytesWritten, chRequest);
 	#endif
 
-	cout<<msg<<endl;
+	std::cout<<msg<<std::endl;
 
 		return true;
 
